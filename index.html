@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandeep Reddy Yadala | Mechanical Engineer</title>
+  <meta name="description" content="Portfolio of Sandeep Reddy Yadala - Mechanical Engineering Undergraduate specializing in Design & Manufacturing, Thermo-Fluid Simulation, and Embedded Mechatronics." />
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration - Custom #00007C & White Palette -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#00007C', // User exact color
+              deep: '#00007C',
+              hover: '#000062',
+              darker: '#00004c',
+              light: '#f0f3ff',
+              border: '#d2dbfd',
+              surface: '#040624',
+              surfaceCard: '#090e38',
+              surfaceBorder: '#162066',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-slate-800 dark:bg-brand-surface dark:text-slate-100 antialiased transition-colors duration-200">
+
+  <!-- Minimal Sticky Navigation Header -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-brand-surface/95 backdrop-blur border-b border-slate-200 dark:border-brand-surfaceBorder">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo / Title -->
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <span class="w-8 h-8 rounded-lg bg-[#00007C] text-white dark:bg-white dark:text-[#00007C] flex items-center justify-center font-bold text-sm tracking-tight shadow-sm group-hover:scale-105 transition-transform">
+          SR
+        </span>
+        <span class="font-extrabold text-sm tracking-tight text-[#00007C] dark:text-white uppercase font-mono">
+          Sandeep Reddy Yadala
+        </span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-mono uppercase tracking-wider text-slate-600 dark:text-slate-300">
+        <a href="#skills" class="hover:text-[#00007C] dark:hover:text-blue-300 transition font-medium">Skills</a>
+        <a href="#certifications" class="hover:text-[#00007C] dark:hover:text-blue-300 transition font-medium">Certifications</a>
+        <a href="#projects" class="hover:text-[#00007C] dark:hover:text-blue-300 transition font-medium">Projects</a>
+        <a href="#contact" class="hover:text-[#00007C] dark:hover:text-blue-300 transition font-medium">Contact</a>
+      </nav>
+
+      <!-- Theme Switcher & Actions -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggle" aria-label="Toggle theme" class="p-2 rounded-lg border border-slate-200 dark:border-brand-surfaceBorder text-[#00007C] dark:text-slate-200 hover:bg-brand-light dark:hover:bg-brand-surfaceCard transition">
+          <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
+        </button>
+
+        <button onclick="downloadOrPrintCV()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border-2 border-[#00007C] text-[#00007C] dark:border-white dark:text-white hover:bg-[#00007C] hover:text-white dark:hover:bg-white dark:hover:text-[#00007C] text-xs font-mono font-semibold transition">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>CV</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <!-- 1. NAME & SUMMARY HERO SECTION WITH TWO PROMINENT BOXES -->
+    <section id="hero" class="pt-16 pb-20 border-b border-slate-200 dark:border-brand-surfaceBorder">
+      
+      <!-- Subtitle badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-light dark:bg-brand-surfaceCard text-[#00007C] dark:text-blue-300 text-xs font-mono mb-6 border border-brand-border dark:border-brand-surfaceBorder">
+        <span class="w-2 h-2 rounded-full bg-[#00007C] dark:bg-blue-400"></span>
+        <span class="font-medium">Mechanical Engineering Undergraduate — Design &amp; Manufacturing</span>
+      </div>
+
+      <!-- Main Name in #00007C -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#00007C] dark:text-white leading-[1.1] mb-6">
+        Sandeep Reddy Yadala
+      </h1>
+
+      <!-- Professional Summary of Mine -->
+      <div class="max-w-3xl">
+        <p class="text-lg sm:text-xl text-slate-700 dark:text-slate-200 leading-relaxed font-normal">
+          Mechanical engineering undergraduate with hands-on experience designing process equipment to <strong class="text-[#00007C] dark:text-white font-semibold">ASME Section VIII Div. 1</strong> and <strong class="text-[#00007C] dark:text-white font-semibold">TEMA Class R</strong> standards, and modeling thermal-fluid systems in <strong class="text-[#00007C] dark:text-white font-semibold">DWSIM</strong> against defined performance targets. Builds on this design rigor with manufacturing exposure across CNC operations, precision measurement, and embedded systems automation.
+        </p>
+
+        <!-- Quick location & contact line -->
+        <div class="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs font-mono text-slate-500 dark:text-slate-400 mt-6 pt-4 border-t border-slate-100 dark:border-brand-surfaceBorder/60">
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#00007C] dark:text-blue-400"></i>
+            Kadiri, Andhra Pradesh, India
+          </span>
+          <span>•</span>
+          <a href="mailto:sandeepreddyyadala89@gmail.com" class="hover:text-[#00007C] dark:hover:text-blue-400 flex items-center gap-1.5 transition">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-[#00007C] dark:text-blue-400"></i>
+            sandeepreddyyadala89@gmail.com
+          </a>
+          <span>•</span>
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-[#00007C] dark:text-blue-400"></i>
+            +91-6305224335
+          </span>
+        </div>
+      </div>
+
+      <!-- TWO PROMINENT BOXES: VIEW MY WORK & DOWNLOAD CV -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mt-10">
+        
+        <!-- Box 1: View My Work (Solid #00007C with Pure White) -->
+        <a href="#projects" class="group p-5 rounded-xl border-2 border-[#00007C] bg-[#00007C] text-white transition-all hover:bg-brand-hover shadow-md flex items-center justify-between">
+          <div>
+            <div class="text-xs font-mono uppercase tracking-wider text-blue-200">Portfolio &amp; Builds</div>
+            <div class="text-lg font-bold tracking-tight mt-0.5 text-white">View My Work</div>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center group-hover:translate-y-1 transition-transform">
+            <i data-lucide="arrow-down" class="w-5 h-5 text-white"></i>
+          </div>
+        </a>
+
+        <!-- Box 2: Download CV (Pure White with 2px #00007C Border) -->
+        <button onclick="downloadOrPrintCV()" class="group p-5 rounded-xl border-2 border-[#00007C] dark:border-white bg-white dark:bg-brand-surfaceCard text-[#00007C] dark:text-white hover:bg-brand-light dark:hover:bg-brand-surface transition-all shadow-sm flex items-center justify-between text-left">
+          <div>
+            <div class="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">Executive PDF Format</div>
+            <div class="text-lg font-bold tracking-tight mt-0.5 text-[#00007C] dark:text-white">Download CV</div>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-brand-light dark:bg-brand-surface flex items-center justify-center group-hover:translate-y-0.5 transition-transform text-[#00007C] dark:text-blue-300">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- 2. TECHNOLOGIES AND SKILLS -->
+    <section id="skills" class="py-16 border-b border-slate-200 dark:border-brand-surfaceBorder">
+      
+      <div class="mb-10">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-[#00007C] dark:text-blue-400 mb-1.5 font-bold">
+          01 // Capabilities Matrix
+        </h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#00007C] dark:text-white">
+          Technologies &amp; Skills
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">
+          Mechanical engineering software, machine shop manufacturing, and computational tools.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Skill 1: Design & Simulation -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm space-y-3 hover:border-[#00007C] dark:hover:border-blue-400 transition">
+          <div class="flex items-center gap-2.5 text-[#00007C] dark:text-white font-bold text-base">
+            <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+            </div>
+            <h4>Design &amp; Simulation</h4>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Thermal-fluid modeling, structural analysis, and mathematical solving.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="skill-pill">ANSYS Workbench</span>
+            <span class="skill-pill">DWSIM Process</span>
+            <span class="skill-pill">MATLAB</span>
+            <span class="skill-pill">Equation Solving</span>
+            <span class="skill-pill">Data/Graph Analysis</span>
+          </div>
+        </div>
+
+        <!-- Skill 2: Manufacturing -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm space-y-3 hover:border-[#00007C] dark:hover:border-blue-400 transition">
+          <div class="flex items-center gap-2.5 text-[#00007C] dark:text-white font-bold text-base">
+            <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+              <i data-lucide="settings" class="w-4 h-4"></i>
+            </div>
+            <h4>Manufacturing</h4>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Machine shop machining operations, CNC tooling, and code authoring.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="skill-pill">CNC Milling Operations</span>
+            <span class="skill-pill">CNC Lathe Turning</span>
+            <span class="skill-pill">Part-Program Writing</span>
+            <span class="skill-pill">Additive Mfg (3D Printing)</span>
+            <span class="skill-pill">Precision Measurement</span>
+          </div>
+        </div>
+
+        <!-- Skill 3: Robotics & Embedded Systems -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm space-y-3 hover:border-[#00007C] dark:hover:border-blue-400 transition">
+          <div class="flex items-center gap-2.5 text-[#00007C] dark:text-white font-bold text-base">
+            <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+              <i data-lucide="cpu" class="w-4 h-4"></i>
+            </div>
+            <h4>Robotics &amp; Embedded</h4>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Actuator control, firmware writing, and sensor circuit integration.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="skill-pill">Arduino Uno Programming</span>
+            <span class="skill-pill">Servo Motor Control</span>
+            <span class="skill-pill">Sensor Integration (IR)</span>
+            <span class="skill-pill">Motion &amp; Thermal Sensors</span>
+            <span class="skill-pill">PWM Control</span>
+          </div>
+        </div>
+
+        <!-- Skill 4: Programming -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm space-y-3 hover:border-[#00007C] dark:hover:border-blue-400 transition">
+          <div class="flex items-center gap-2.5 text-[#00007C] dark:text-white font-bold text-base">
+            <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+              <i data-lucide="code" class="w-4 h-4"></i>
+            </div>
+            <h4>Programming</h4>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Engineering computations, scientific data analysis, and algorithms.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="skill-pill">Python (Data Analysis)</span>
+            <span class="skill-pill">Engineering Computation</span>
+            <span class="skill-pill">Java (Data Structures)</span>
+            <span class="skill-pill">Algorithms &amp; Logic</span>
+          </div>
+        </div>
+
+        <!-- Skill 5: Lab FEA & Structural Testing -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm space-y-3 hover:border-[#00007C] dark:hover:border-blue-400 transition">
+          <div class="flex items-center gap-2.5 text-[#00007C] dark:text-white font-bold text-base">
+            <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+              <i data-lucide="activity" class="w-4 h-4"></i>
+            </div>
+            <h4>Lab Experience (FEA)</h4>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            ANSYS Workbench finite element modeling of structural members.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="skill-pill">FEA of Beams</span>
+            <span class="skill-pill">Hollow Cylinders</span>
+            <span class="skill-pill">Tensile / Compression</span>
+            <span class="skill-pill">Bending Stress Analysis</span>
+          </div>
+        </div>
+
+        <!-- Skill 6: Codes & Languages -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm space-y-3 hover:border-[#00007C] dark:hover:border-blue-400 transition">
+          <div class="flex items-center gap-2.5 text-[#00007C] dark:text-white font-bold text-base">
+            <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+              <i data-lucide="globe" class="w-4 h-4"></i>
+            </div>
+            <h4>Codes &amp; Languages</h4>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Industrial engineering design codes and multilingual proficiency.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="skill-pill">ASME Sec VIII Div 1</span>
+            <span class="skill-pill">TEMA Class R</span>
+            <span class="skill-pill">English (Professional)</span>
+            <span class="skill-pill">Telugu (Native)</span>
+            <span class="skill-pill">Hindi (Moderate)</span>
+            <span class="skill-pill">German (Beginner)</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 3. CERTIFICATIONS & TRAINING -->
+    <section id="certifications" class="py-16 border-b border-slate-200 dark:border-brand-surfaceBorder">
+      
+      <div class="mb-10">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-[#00007C] dark:text-blue-400 mb-1.5 font-bold">
+          02 // Verified Credentials
+        </h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#00007C] dark:text-white">
+          Certifications &amp; Training
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">
+          Industrial capstone programs, engineering simulations, and aerospace workflows.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        
+        <!-- Certification 1: L&T EduTech -->
+        <div class="p-6 sm:p-7 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-slate-100 dark:border-brand-surfaceBorder/80 pb-4 mb-4">
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <h4 class="text-lg font-bold text-[#00007C] dark:text-white">
+                  Thermo-Mechanical Design and Simulation of Process Equipment
+                </h4>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300 font-semibold border border-brand-border dark:border-brand-surfaceBorder">
+                  L&amp;T EduTech
+                </span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                L&amp;T EduTech Summer Internship Certification — Independent capstone project, self-paced with live instructor sessions
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 shrink-0 font-medium">
+              May – Jul 2026
+            </div>
+          </div>
+
+          <!-- Bullets -->
+          <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+              <span>
+                Designed shell, tube, and tube-sheet thickness for a shell-and-tube heat exchanger (SS 304) to <strong class="text-[#00007C] dark:text-white font-medium">ASME Section VIII Div. 1</strong> and <strong class="text-[#00007C] dark:text-white font-medium">TEMA Class R</strong> code requirements.
+              </span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+              <span>
+                Modeled an ethylene–oxygen shell-and-tube exchanger in <strong class="text-[#00007C] dark:text-white font-medium">DWSIM</strong> (532 tubes, 750mm shell ID, 2 tube passes), achieving <strong class="text-[#00007C] dark:text-white font-medium">U = 302.8 W/m²K</strong> across <strong class="text-[#00007C] dark:text-white font-medium">154.16 m²</strong> of exchange area.
+              </span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+              <span>
+                Compared Pitched-Blade Turbine and Hydrofoil agitators at matched power draw (1245.8 W); identified Hydrofoil as <strong class="text-[#00007C] dark:text-white font-medium">26% more efficient</strong> (0.152 vs 0.121 m³/s pumping rate).
+              </span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+              <span>
+                Simulated binary flash distillation of an n-hexane/n-octane feed (400 kmol/hr, 98.2°C, 1 atm), achieving <strong class="text-[#00007C] dark:text-white font-medium">68.5% hexane enrichment</strong> in vapor and <strong class="text-[#00007C] dark:text-white font-medium">69% octane recovery</strong> in liquid.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Certification 2: GE Aerospace & Aerospace Experience -->
+        <div class="p-6 sm:p-7 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-slate-100 dark:border-brand-surfaceBorder/80 pb-4 mb-4">
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <h4 class="text-lg font-bold text-[#00007C] dark:text-white">
+                  Explore Supply Chain Job Simulation
+                </h4>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300 font-semibold border border-brand-border dark:border-brand-surfaceBorder">
+                  GE Aerospace — Forage
+                </span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                Aviation Manufacturing, Fixture Requirements &amp; Blade Defect Tolerancing
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 shrink-0 font-medium">
+              Apr 2026
+            </div>
+          </div>
+
+          <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+              <span>
+                Determined critical requirements for a turbofan disassembly fixture.
+              </span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+              <span>
+                Independently researched and applied <strong class="text-[#00007C] dark:text-white font-medium">GES 251-004 tolerance criteria</strong> to disposition non-conforming turbine blades (rework, scrap, or engineering review) across undersized, oversized, and out-of-position hole defect scenarios.
+              </span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+              <span>
+                <strong class="text-[#00007C] dark:text-white font-medium">Aerospace Work Experience:</strong> (Springpod × Airbus) and Rolls-Royce: Aerospace Engineer — virtual industry insight programs covering aerospace engineering workflows and systems (Aug 2026).
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 4. PROJECTS: HORIZONTAL THREE BOXES SIDE-WISE -->
+    <section id="projects" class="py-16 border-b border-slate-200 dark:border-brand-surfaceBorder">
+      
+      <div class="mb-10">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-[#00007C] dark:text-blue-400 mb-1.5 font-bold">
+          03 // Engineering Builds
+        </h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#00007C] dark:text-white">
+          Projects
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">
+          Hardware fabrication, mechatronics automation, and advanced materials.
+        </p>
+      </div>
+
+      <!-- HORIZONTAL 3 BOXES (SIDE-BY-SIDE ON DESKTOP & TABLET) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        
+        <!-- BOX 1: Quadruped Spider Robot -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm flex flex-col justify-between hover:border-[#00007C] dark:hover:border-blue-400 hover:shadow-md transition-all">
+          <div>
+            <!-- Box Header -->
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-[#00007C] dark:text-blue-300 font-semibold">Team of 6 • VIT-AP</span>
+              <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+                <i data-lucide="bot" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <h4 class="text-lg font-bold text-[#00007C] dark:text-white leading-snug mb-1">
+              Quadruped Spider Robot
+            </h4>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mb-4">
+              4-Leg Manipulator • 12 Servos
+            </div>
+
+            <!-- Bullet Points -->
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              <li class="flex items-start gap-2">
+                <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0">•</span>
+                <span>Contributed to 3D printing (PLA) and mechanical assembly of a 12-servo quadruped (4 legs × 3 servos: hip-to-body, hip-to-leg, and knee joints).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0">•</span>
+                <span>Assembled leg linkages combining 2 servos/leg for horizontal traversal with 1 servo for vertical lift, achieving stable multi-axis movement across uneven surfaces.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tags Footer -->
+          <div class="pt-4 border-t border-slate-100 dark:border-brand-surfaceBorder/60 flex flex-wrap gap-1.5">
+            <span class="skill-pill">3D Printing (PLA)</span>
+            <span class="skill-pill">12 Micro-Servos</span>
+            <span class="skill-pill">Linkage Kinematics</span>
+            <span class="skill-pill">Arduino Uno</span>
+          </div>
+        </div>
+
+        <!-- BOX 2: Smart Streetlight System -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm flex flex-col justify-between hover:border-[#00007C] dark:hover:border-blue-400 hover:shadow-md transition-all">
+          <div>
+            <!-- Box Header -->
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-[#00007C] dark:text-blue-300 font-semibold">Team of 6 • VIT-AP</span>
+              <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+                <i data-lucide="lightbulb" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <h4 class="text-lg font-bold text-[#00007C] dark:text-white leading-snug mb-1">
+              Smart Streetlight System
+            </h4>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mb-4">
+              Sensor-Responsive Municipal Grid
+            </div>
+
+            <!-- Bullet Points -->
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              <li class="flex items-start gap-2">
+                <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0">•</span>
+                <span>Contributed to hardware integration and testing of an Arduino Uno-based automation system using thermal and motion sensors placed along pavements.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0">•</span>
+                <span>System logic triggered streetlights on upon detected motion or heat signal, and powered them off when idle — cutting unnecessary power consumption.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tags Footer -->
+          <div class="pt-4 border-t border-slate-100 dark:border-brand-surfaceBorder/60 flex flex-wrap gap-1.5">
+            <span class="skill-pill">Arduino Uno</span>
+            <span class="skill-pill">Thermal Sensors</span>
+            <span class="skill-pill">Motion (PIR)</span>
+            <span class="skill-pill">Energy Savings</span>
+          </div>
+        </div>
+
+        <!-- BOX 3: PVDF/ZnO/Fe₃O₄ Hybrid Composite Films (Research Paper) -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm flex flex-col justify-between hover:border-[#00007C] dark:hover:border-blue-400 hover:shadow-md transition-all">
+          <div>
+            <!-- Box Header -->
+            <div class="flex items-center justify-between text-xs font-mono mb-3">
+              <span class="text-[#00007C] dark:text-blue-300 font-semibold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                ICRAMERD 2026 • Submitted
+              </span>
+              <div class="p-1.5 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300">
+                <i data-lucide="file-check" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <h4 class="text-lg font-bold text-[#00007C] dark:text-white leading-snug mb-1">
+              PVDF/ZnO/Fe₃O₄ Hybrid Composite Films
+            </h4>
+            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mb-3">
+              Piezoelectric Applications — Research Paper
+            </div>
+
+            <!-- Paper Status Callout -->
+            <div class="p-2.5 rounded-lg bg-brand-light dark:bg-brand-surface border border-brand-border dark:border-brand-surfaceBorder text-xs font-mono mb-4 flex items-center justify-between">
+              <span class="text-[#00007C] dark:text-blue-300 font-bold">Paper ID: 65</span>
+              <span class="text-emerald-700 dark:text-emerald-400 font-semibold uppercase text-[11px]">Status: Submitted</span>
+            </div>
+
+            <!-- Bullet Points -->
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              <li class="flex items-start gap-2">
+                <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0">•</span>
+                <span>Co-authored a research paper investigating the fabrication and characterization of PVDF-based hybrid composite films using ZnO and Fe₃O₄ nanofillers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#00007C] dark:text-blue-400 font-bold shrink-0">•</span>
+                <span>Explored their structural, morphological, electroactive and dielectric properties using SEM, XRD, FTIR and dielectric spectroscopy.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tags Footer -->
+          <div class="pt-4 border-t border-slate-100 dark:border-brand-surfaceBorder/60 flex flex-wrap gap-1.5">
+            <span class="skill-pill">ICRAMERD 2026</span>
+            <span class="skill-pill">Paper ID: 65</span>
+            <span class="skill-pill">SEM &amp; XRD</span>
+            <span class="skill-pill">FTIR Spectroscopy</span>
+            <span class="skill-pill">Dielectric Analysis</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EDUCATION & CAMPUS INVOLVEMENT STRIP -->
+    <section class="py-12 border-b border-slate-200 dark:border-brand-surfaceBorder">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Education -->
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-[#00007C] dark:text-blue-400 mb-1.5 font-bold">
+            Academic Background
+          </h2>
+          <h4 class="text-lg font-bold text-[#00007C] dark:text-white">
+            B.Tech in Mechanical Engineering
+          </h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">VIT-AP University • 2023–2027 (Expected)</p>
+          <div class="text-xs font-mono font-bold text-[#00007C] dark:text-blue-300 mt-1">
+            CGPA: 7.95 / 10.0
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <strong>Coursework:</strong> Fluid Mechanics, Thermodynamics, Heat &amp; Mass Transfer, Machine Design, Manufacturing Technology, Mechatronics, Robot Dynamics, Additive Manufacturing.
+          </p>
+        </div>
+
+        <!-- Campus Involvement -->
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-[#00007C] dark:text-blue-400 mb-1.5 font-bold">
+            Campus Involvement
+          </h2>
+          <h4 class="text-lg font-bold text-[#00007C] dark:text-white">
+            PR &amp; Outreach Team
+          </h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Google Developers Group (GDG) Campus Chapter</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            Recruited hackathon participants through direct on-site outreach — engaged passing students at promotional stalls and guided them through event registration and technical tracks.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. FINAL: CONTACT SECTION -->
+    <section id="contact" class="py-16">
+      
+      <div class="mb-10">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-[#00007C] dark:text-blue-400 mb-1.5 font-bold">
+          04 // Direct Reachout
+        </h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#00007C] dark:text-white">
+          Contact Details
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">
+          Open to mechanical design, simulation engineering, and robotics internship opportunities.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        <!-- Contact Cards -->
+        <div class="space-y-3">
+          
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm flex items-center justify-between hover:border-[#00007C] dark:hover:border-blue-400 transition">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-mono text-slate-400 uppercase">Email</div>
+                <a href="mailto:sandeepreddyyadala89@gmail.com" class="text-sm font-semibold text-slate-800 dark:text-white hover:text-[#00007C] dark:hover:text-blue-400 transition">
+                  sandeepreddyyadala89@gmail.com
+                </a>
+              </div>
+            </div>
+            <button onclick="copyText('sandeepreddyyadala89@gmail.com', this)" class="p-1.5 text-slate-400 hover:text-[#00007C] dark:hover:text-white transition" title="Copy email">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm flex items-center justify-between hover:border-[#00007C] dark:hover:border-blue-400 transition">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300 flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-mono text-slate-400 uppercase">Phone &amp; WhatsApp</div>
+                <a href="tel:+916305224335" class="text-sm font-semibold text-slate-800 dark:text-white hover:text-[#00007C] dark:hover:text-blue-400 transition">
+                  +91-6305224335
+                </a>
+              </div>
+            </div>
+            <button onclick="copyText('+916305224335', this)" class="p-1.5 text-slate-400 hover:text-[#00007C] dark:hover:text-white transition" title="Copy phone">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm flex items-center justify-between hover:border-[#00007C] dark:hover:border-blue-400 transition">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300 flex items-center justify-center shrink-0">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-mono text-slate-400 uppercase">LinkedIn</div>
+                <a href="https://linkedin.com/in/sandeepreddyyadala" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#00007C] dark:text-blue-400 hover:underline">
+                  linkedin.com/in/sandeepreddyyadala
+                </a>
+              </div>
+            </div>
+            <a href="https://linkedin.com/in/sandeepreddyyadala" target="_blank" class="p-1.5 text-slate-400 hover:text-[#00007C] dark:hover:text-white transition">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-brand-light dark:bg-brand-surface text-[#00007C] dark:text-blue-300 flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <div class="text-[11px] font-mono text-slate-400 uppercase">Location</div>
+              <div class="text-sm font-semibold text-slate-800 dark:text-white">
+                Kadiri, Andhra Pradesh, India
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Clean Quick Message Form -->
+        <div class="p-6 rounded-xl border border-slate-200 dark:border-brand-surfaceBorder bg-white dark:bg-brand-surfaceCard shadow-sm">
+          <h4 class="text-base font-bold text-[#00007C] dark:text-white mb-1">
+            Send a Quick Inquiry
+          </h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">
+            Dispatches directly to my inbox.
+          </p>
+
+          <form onsubmit="sendDirectEmail(event)" class="space-y-3.5 text-sm">
+            <div>
+              <label class="block text-xs font-mono text-slate-500 dark:text-slate-400 mb-1">Your Name</label>
+              <input type="text" id="contactName" required placeholder="Name or Recruiter" class="clean-input" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono text-slate-500 dark:text-slate-400 mb-1">Your Email</label>
+              <input type="email" id="contactEmail" required placeholder="name@organization.com" class="clean-input" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono text-slate-500 dark:text-slate-400 mb-1">Message</label>
+              <textarea id="contactMessage" rows="3" required placeholder="Project or opportunity details..." class="clean-input"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-2.5 rounded-lg bg-[#00007C] hover:bg-brand-hover text-white font-semibold text-xs uppercase tracking-wider transition shadow-sm">
+              Dispatch Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Clean #00007C & White Footer -->
+  <footer class="border-t border-slate-200 dark:border-brand-surfaceBorder py-8 text-center text-xs font-mono text-slate-500 dark:text-slate-400">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        © 2026 Sandeep Reddy Yadala • Mechanical Engineering
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#hero" class="hover:text-[#00007C] dark:hover:text-white transition">Top ↑</a>
+        <span>•</span>
+        <button onclick="downloadOrPrintCV()" class="hover:text-[#00007C] dark:hover:text-white transition">Download CV</button>
+        <span>•</span>
+        <a href="mailto:sandeepreddyyadala89@gmail.com" class="hover:text-[#00007C] dark:hover:text-white transition">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Resume Modal for CV Viewing & Download -->
+  <div id="cvModal" class="fixed inset-0 z-50 hidden bg-[#00007C]/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative w-full max-w-3xl rounded-xl bg-white dark:bg-brand-surfaceCard border border-slate-200 dark:border-brand-surfaceBorder shadow-2xl p-6 sm:p-8 max-h-[92vh] overflow-y-auto">
+      
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-brand-surfaceBorder pb-4 mb-6">
+        <div>
+          <h3 class="text-xl font-bold text-[#00007C] dark:text-white">Curriculum Vitae</h3>
+          <p class="text-xs font-mono text-slate-500 dark:text-slate-400">Sandeep Reddy Yadala — Mechanical Engineering</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3 py-1.5 rounded-md bg-[#00007C] text-white text-xs font-mono font-semibold flex items-center gap-1.5 hover:bg-brand-hover transition">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <button onclick="closeCVModal()" class="p-1.5 rounded-md text-slate-400 hover:text-[#00007C] dark:hover:text-white transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Resume Paper Preview Content -->
+      <div class="space-y-6 text-sm text-slate-700 dark:text-slate-300 font-sans">
+        
+        <div class="text-center pb-4 border-b border-slate-200 dark:border-brand-surfaceBorder">
+          <h2 class="text-2xl font-bold tracking-tight text-[#00007C] dark:text-white">SANDEEP REDDY YADALA</h2>
+          <div class="text-xs font-mono text-slate-600 dark:text-slate-400 mt-1">
+            Mechanical Engineering Undergraduate — Design &amp; Manufacturing
+          </div>
+          <div class="text-xs font-mono text-slate-500 mt-1">
+            Kadiri, Andhra Pradesh, India | +91-6305224335 | sandeepreddyyadala89@gmail.com | linkedin.com/in/sandeepreddyyadala
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono uppercase font-bold text-[#00007C] dark:text-white border-b border-slate-200 dark:border-brand-surfaceBorder pb-1 mb-2">
+            Professional Summary
+          </h4>
+          <p class="text-xs leading-relaxed">
+            Mechanical engineering undergraduate with hands-on experience designing process equipment to ASME Section VIII Div. 1 and TEMA Class R standards, and modeling thermal-fluid systems in DWSIM against defined performance targets. Builds on this design rigor with manufacturing exposure across CNC operations, precision measurement, and embedded systems automation.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono uppercase font-bold text-[#00007C] dark:text-white border-b border-slate-200 dark:border-brand-surfaceBorder pb-1 mb-2">
+            Education
+          </h4>
+          <div class="flex justify-between text-xs font-semibold text-[#00007C] dark:text-white">
+            <span>B.Tech in Mechanical Engineering — VIT-AP University</span>
+            <span>2023–2027 (Expected)</span>
+          </div>
+          <div class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">CGPA: 7.95 / 10.0</div>
+          <p class="text-[11px] text-slate-500 mt-1">
+            Coursework: Fluid Mechanics, Thermodynamics, Heat &amp; Mass Transfer, Machine Design, Manufacturing Technology, Mechatronics, Robot Dynamics, Additive Manufacturing.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono uppercase font-bold text-[#00007C] dark:text-white border-b border-slate-200 dark:border-brand-surfaceBorder pb-1 mb-2">
+            Certifications &amp; Training
+          </h4>
+          <div class="space-y-3 text-xs">
+            <div>
+              <div class="flex justify-between font-semibold text-[#00007C] dark:text-white">
+                <span>Thermo-Mechanical Design and Simulation of Process Equipment (L&amp;T EduTech)</span>
+                <span>May–Jul 2026</span>
+              </div>
+              <ul class="list-disc pl-4 text-slate-600 dark:text-slate-400 text-[11px] mt-1 space-y-0.5">
+                <li>Designed shell, tube, and tube-sheet thickness for heat exchanger (SS 304) to ASME Sec VIII Div. 1 &amp; TEMA Class R.</li>
+                <li>Modeled ethylene–oxygen exchanger in DWSIM (532 tubes, 750mm shell ID, 2 passes), U = 302.8 W/m²K, 154.16 m² area.</li>
+                <li>Identified Hydrofoil agitator as 26% more efficient than Pitched-Blade at matched power draw (1245.8 W).</li>
+                <li>Simulated binary flash distillation (n-hexane/n-octane, 400 kmol/hr): 68.5% hexane enrichment, 69% octane recovery.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-semibold text-[#00007C] dark:text-white">
+                <span>GE Aerospace: Explore Supply Chain Job Simulation (Forage)</span>
+                <span>Apr 2026</span>
+              </div>
+              <ul class="list-disc pl-4 text-slate-600 dark:text-slate-400 text-[11px] mt-1 space-y-0.5">
+                <li>Determined critical requirements for a turbofan disassembly fixture.</li>
+                <li>Applied GES 251-004 tolerance criteria to disposition non-conforming turbine blades (rework/scrap/engineering review).</li>
+                <li>Springpod × Airbus &amp; Rolls-Royce: Aerospace Engineer virtual insight programs (Aug 2026).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono uppercase font-bold text-[#00007C] dark:text-white border-b border-slate-200 dark:border-brand-surfaceBorder pb-1 mb-2">
+            Projects
+          </h4>
+          <div class="space-y-3 text-xs">
+            <div>
+              <div class="flex justify-between font-semibold text-[#00007C] dark:text-white">
+                <span>Quadruped Spider Robot — 4-Leg Manipulator</span>
+                <span>VIT-AP University</span>
+              </div>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">
+                3D printed (PLA) and assembled 12-servo quadruped (4 legs × 3 servos). 2 servos per leg for horizontal traversal with 1 servo for vertical lift, achieving stable multi-axis movement.
+              </p>
+            </div>
+            <div>
+              <div class="flex justify-between font-semibold text-[#00007C] dark:text-white">
+                <span>Smart Streetlight System</span>
+                <span>VIT-AP University</span>
+              </div>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">
+                Arduino Uno automation system using thermal and motion sensors along pavements to trigger lights upon detection and power off during idle time.
+              </p>
+            </div>
+            <div>
+              <div class="flex justify-between font-semibold text-[#00007C] dark:text-white">
+                <span>PVDF/ZnO/Fe₃O₄ Hybrid Composite Films for Piezoelectric Applications</span>
+                <span>ICRAMERD 2026</span>
+              </div>
+              <div class="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 font-semibold mt-0.5">
+                Status: Submitted | Paper ID: 65
+              </div>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5 leading-relaxed">
+                Co-authored a research paper investigating the fabrication and characterization of PVDF-based hybrid composite films using ZnO and Fe₃O₄ nanofillers. Explored structural, morphological, electroactive and dielectric properties using SEM, XRD, FTIR and dielectric spectroscopy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-200 px-4 py-2.5 rounded-lg bg-[#00007C] text-white text-xs font-mono shadow-xl flex items-center gap-2 pointer-events-none">
+    <i data-lucide="check" class="w-3.5 h-3.5 text-blue-300"></i>
+    <span id="toastText">Action completed</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

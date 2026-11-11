@@ -1,0 +1,66 @@
+/* Sandeep Reddy Yadala - #00007C & White Palette Stylesheet */
+
+@layer utilities {
+  .skill-pill {
+    @apply inline-block text-xs font-mono px-2.5 py-1 rounded-md bg-[#f0f3ff] dark:bg-[#0a1038] text-[#00007C] dark:text-blue-200 border border-[#d2dbfd] dark:border-[#1e2a73] font-semibold;
+  }
+
+  .clean-input {
+    @apply w-full px-3.5 py-2.5 rounded-lg bg-white dark:bg-[#0a1038] border border-slate-200 dark:border-[#1e2a73] text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-[#00007C] dark:focus:border-blue-400 focus:ring-1 focus:ring-[#00007C] dark:focus:ring-blue-400 text-xs sm:text-sm transition;
+  }
+}
+
+/* Subtle smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5d0ff;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #162066;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00007C;
+}
+
+/* Print Stylesheet for CV / Resume */
+@media print {
+  header,
+  footer,
+  #hero .grid, /* Hide action CTA boxes on print */
+  #contact form,
+  #toast,
+  button {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 10.5pt !important;
+  }
+
+  .dark {
+    color: black !important;
+  }
+
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    break-inside: avoid;
+  }
+
+  .border, .border-2 {
+    border-color: #e2e8f0 !important;
+  }
+
+  .text-\[\#00007C\] {
+    color: #00007C !important;
+  }
+}
